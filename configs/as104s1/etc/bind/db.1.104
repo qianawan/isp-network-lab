@@ -1,0 +1,37 @@
+$TTL 3600
+@       IN      SOA     ns.isp104.lab. admin.isp104.lab. (
+                        2026092002      ; serial
+                        3600            ; refresh
+                        1800            ; retry
+                        604800          ; expire
+                        86400 )         ; negative TTL
+
+@       IN      NS      ns.isp104.lab.
+
+; ============ server network 1.104.1.0/24 ============
+1.1     IN      PTR     r3-eth0.isp104.lab.
+2.1     IN      PTR     ns.isp104.lab.
+3.1     IN      PTR     dhcpd.isp104.lab.
+4.1     IN      PTR     www.isp104.lab.
+
+; ============ client network 1.104.2.0/24 ============
+1.2     IN      PTR     r4-eth0.isp104.lab.
+2.2     IN      PTR     c1.isp104.lab.
+3.2     IN      PTR     c2.isp104.lab.
+
+; ============ backbone 1.104.0.0/20 ============
+1.0     IN      PTR     r1.isp104.lab.
+21.0    IN      PTR     r1-eth1.isp104.lab.
+17.0    IN      PTR     r1-eth2.isp104.lab.
+33.0    IN      PTR     r1-eth3.isp104.lab.
+2.0     IN      PTR     r2.isp104.lab.
+22.0    IN      PTR     r2-eth1.isp104.lab.
+25.0    IN      PTR     r2-eth2.isp104.lab.
+3.0     IN      PTR     r3.isp104.lab.
+30.0    IN      PTR     r3-eth1.isp104.lab.
+26.0    IN      PTR     r3-eth2.isp104.lab.
+34.0    IN      PTR     r3-eth3.isp104.lab.
+4.0     IN      PTR     r4.isp104.lab.
+29.0    IN      PTR     r4-eth1.isp104.lab.
+18.0    IN      PTR     r4-eth2.isp104.lab.
+
